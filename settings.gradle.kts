@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Recipes"
 include(":app")
+include(":themes")
