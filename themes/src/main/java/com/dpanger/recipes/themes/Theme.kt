@@ -1,4 +1,4 @@
-package com.dpanger.recipes.ui.theme
+package com.dpanger.recipes.themes
 
 import android.app.Activity
 import android.os.Build

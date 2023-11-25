@@ -1,4 +1,4 @@
-package com.dpanger.recipes.ui.theme
+package com.dpanger.recipes.themes
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
