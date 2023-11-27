@@ -65,6 +65,7 @@ dependencies {
     implementation(libs.material3)
 
     implementation(project(":themes"))
+    implementation(project(":home"))
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)

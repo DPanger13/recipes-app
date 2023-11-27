@@ -44,9 +44,15 @@ android {
 }
 
 dependencies {
+    implementation(project(":themes"))
+
     implementation(libs.core.ktx)
-    implementation(libs.appcompat)
-    implementation(libs.material)
+
+    implementation(platform(libs.compose.bom))
+    implementation(libs.material3)
+
+    implementation(libs.ui.tooling.preview)
+    debugImplementation(libs.ui.tooling)
 
     testImplementation(libs.junit)
 
