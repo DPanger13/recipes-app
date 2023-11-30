@@ -44,9 +44,11 @@ android {
 }
 
 dependencies {
+    implementation(project(":data"))
     implementation(project(":themes"))
 
     implementation(libs.core.ktx)
+    implementation(libs.collections)
 
     implementation(platform(libs.compose.bom))
     implementation(libs.material3)
