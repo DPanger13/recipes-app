@@ -5,3 +5,4 @@ Highlights:
 - Modular architecture
 - Multi-platform data layer (Rust)
 - Declarative UI (Compose)
+- App-wide theming
