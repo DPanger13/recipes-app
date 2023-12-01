@@ -1,26 +1,35 @@
 package com.dpanger.recipes.home
 
-import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.res.stringResource
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.dpanger.recipes.data.Recipe
-import com.dpanger.recipes.themes.RecipesTheme
 import kotlinx.collections.immutable.toImmutableList
 
 @Composable
-fun HomeScreen(modifier: Modifier = Modifier) {
-    Recipes(
-        modifier = modifier,
-        recipes = emptyList<Recipe>().toImmutableList()
-    )
-}
-
-@Composable
-@Preview
-private fun HomeScreenPreview() {
-    RecipesTheme {
-        HomeScreen(modifier = Modifier.fillMaxSize())
+fun HomeScreen(
+    viewModel: HomeViewModel,
+    modifier: Modifier = Modifier
+) {
+    when (val uiState = viewModel.uiState.collectAsStateWithLifecycle().value) {
+        is HomeUiState.Loading -> {
+            CircularProgressIndicator(
+                modifier = modifier
+            )
+        }
+        is HomeUiState.Success -> {
+            Recipes(
+                modifier = modifier,
+                recipes = uiState.recipes
+            )
+        }
+        is HomeUiState.Error -> {
+            Text(
+                text = stringResource(id = R.string.generic_error_message)
+            )
+        }
     }
 }

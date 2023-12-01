@@ -2,6 +2,8 @@
 plugins {
     alias(libs.plugins.com.android.application)
     alias(libs.plugins.org.jetbrains.kotlin.android)
+    kotlin("kapt")
+    alias(libs.plugins.hilt)
 }
 
 android {
@@ -63,6 +65,10 @@ dependencies {
     implementation(libs.ui.graphics)
     implementation(libs.ui.tooling.preview)
     implementation(libs.material3)
+
+    implementation(libs.hilt)
+    kapt(libs.hilt.compiler)
+    implementation(libs.hilt.navigation.compose)
 
     implementation(project(":themes"))
     implementation(project(":home"))

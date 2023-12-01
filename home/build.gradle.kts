@@ -2,6 +2,8 @@
 plugins {
     alias(libs.plugins.com.android.library)
     alias(libs.plugins.org.jetbrains.kotlin.android)
+    kotlin("kapt")
+    alias(libs.plugins.hilt)
 }
 
 android {
@@ -41,6 +43,12 @@ android {
     composeOptions {
         kotlinCompilerExtensionVersion = libs.versions.compose.compiler.get()
     }
+
+    testOptions {
+        unitTests.all {
+            it.useJUnitPlatform()
+        }
+    }
 }
 
 dependencies {
@@ -53,11 +61,25 @@ dependencies {
     implementation(platform(libs.compose.bom))
     implementation(libs.material3)
 
+    implementation(libs.lifecycle.viewmodel)
+    implementation(libs.lifecycle.runtime.compose)
+
+    implementation(libs.hilt)
+    kapt(libs.hilt.compiler)
+    implementation(libs.hilt.navigation.compose)
+
     implementation(libs.ui.tooling.preview)
     debugImplementation(libs.ui.tooling)
 
-    testImplementation(libs.junit)
+    testImplementation(libs.junit5)
+    testImplementation(libs.mockk)
+    testImplementation(libs.kotest)
+    testImplementation(libs.coroutines.test)
 
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)
+}
+
+kapt {
+    correctErrorTypes = true
 }
