@@ -38,8 +38,8 @@ android {
 }
 
 dependencies {
-    implementation(project(":data"))
 
+    implementation(project(":data-multiplatform"))
     implementation(libs.core.ktx)
 
     implementation(platform(libs.compose.bom))

@@ -52,7 +52,7 @@ android {
 }
 
 dependencies {
-    implementation(project(":data"))
+    implementation(project(":data-multiplatform"))
     implementation(project(":themes"))
 
     implementation(libs.core.ktx)
