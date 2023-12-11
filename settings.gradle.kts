@@ -17,5 +17,5 @@ rootProject.name = "Recipes"
 include(":app")
 include(":themes")
 include(":home")
-include(":data")
+include(":data-multiplatform")
 include(":add")
