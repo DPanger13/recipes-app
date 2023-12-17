@@ -1,6 +1,6 @@
 @Suppress("DSL_SCOPE_VIOLATION") // TODO: Remove once KTIJ-19369 is fixed
 plugins {
-    id("library-android")
+    id("library-android-compose")
     kotlin("kapt")
     alias(libs.plugins.hilt)
 }
