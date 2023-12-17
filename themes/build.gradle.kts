@@ -45,7 +45,8 @@ android {
 
 dependencies {
     implementation(libs.core.ktx)
-    implementation(libs.activity.compose)
+
     implementation(platform(libs.compose.bom))
-    implementation(libs.material3)
+    implementation(libs.bundles.compose)
+    debugImplementation(libs.bundles.compose.debug)
 }

@@ -43,17 +43,14 @@ dependencies {
     implementation(libs.core.ktx)
 
     implementation(platform(libs.compose.bom))
-    implementation(libs.material3)
+    implementation(libs.bundles.compose)
+    debugImplementation(libs.bundles.compose.debug)
 
     implementation(libs.lifecycle.viewmodel)
-    implementation(libs.lifecycle.runtime.compose)
 
     implementation(libs.hilt)
     kapt(libs.hilt.compiler)
     implementation(libs.hilt.navigation.compose)
-
-    implementation(libs.ui.tooling.preview)
-    debugImplementation(libs.ui.tooling)
 
     testImplementation(libs.junit5)
     testImplementation(libs.mockk)

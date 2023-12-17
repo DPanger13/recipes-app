@@ -55,22 +55,18 @@ android {
 }
 
 dependencies {
+    implementation(project(":themes"))
+    implementation(project(":home"))
+
     implementation(libs.core.ktx)
     implementation(libs.lifecycle.runtime.ktx)
-    implementation(libs.activity.compose)
+
     implementation(platform(libs.compose.bom))
-    implementation(libs.ui)
-    implementation(libs.ui.graphics)
-    implementation(libs.ui.tooling.preview)
-    implementation(libs.material3)
+    implementation(libs.bundles.compose)
+    implementation(libs.activity.compose)
+    debugImplementation(libs.bundles.compose.debug)
 
     implementation(libs.hilt)
     kapt(libs.hilt.compiler)
     implementation(libs.hilt.navigation.compose)
-
-    implementation(project(":themes"))
-    implementation(project(":home"))
-
-    debugImplementation(libs.ui.tooling)
-    debugImplementation(libs.ui.test.manifest)
 }

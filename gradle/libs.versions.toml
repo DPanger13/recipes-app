@@ -45,4 +45,5 @@ kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "org-jetbr
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "org-jetbrains-kotlin-jvm" }
 
 [bundles]
-
+compose = [ "collections", "material3", "lifecycle-runtime-compose", "ui-tooling-preview", "ui-graphics", "ui" ]
+compose-debug = [ "ui-tooling" ]
