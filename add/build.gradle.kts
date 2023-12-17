@@ -52,8 +52,5 @@ dependencies {
     kapt(libs.hilt.compiler)
     implementation(libs.hilt.navigation.compose)
 
-    testImplementation(libs.junit5)
-    testImplementation(libs.mockk)
-    testImplementation(libs.kotest)
-    testImplementation(libs.coroutines.test)
+    testImplementation(libs.bundles.testing)
 }

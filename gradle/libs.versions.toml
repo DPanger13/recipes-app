@@ -47,3 +47,4 @@ kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "org-jetbrains-kot
 [bundles]
 compose = [ "collections", "material3", "lifecycle-runtime-compose", "ui-tooling-preview", "ui-graphics", "ui" ]
 compose-debug = [ "ui-tooling" ]
+testing = [ "junit5", "mockk", "kotest", "coroutines-test" ]
