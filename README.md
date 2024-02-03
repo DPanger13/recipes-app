@@ -1,8 +1,7 @@
-# Recipes (WIP)
-Android app to save recipes
+# Vehicles
+Demo Android app that displays information about vehicle manufacturers
 
 Highlights:
 - Modular architecture
-- Multi-platform data layer (Rust)
-- Declarative UI (Compose)
-- App-wide theming
+- Multi-platform library integration (Rust + UniFFI)
+- Compose
