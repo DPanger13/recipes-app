@@ -14,7 +14,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Recipes"
+rootProject.name = "Vehicles-Android"
 include(":app")
 include(":themes")
 include(":home")
