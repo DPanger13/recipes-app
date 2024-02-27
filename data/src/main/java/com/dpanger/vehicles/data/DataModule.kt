@@ -10,4 +10,7 @@ import dagger.hilt.components.SingletonComponent
 internal class DataModule {
     @Provides
     fun provideRecipeRepository() = recipeRepository()
+
+    @Provides
+    fun provideManufacturerRepository() = manufacturerRepository()
 }
