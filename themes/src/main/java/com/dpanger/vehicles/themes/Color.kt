@@ -1,4 +1,4 @@
-package com.dpanger.recipes.themes
+package com.dpanger.vehicles.themes
 
 import androidx.compose.ui.graphics.Color
 

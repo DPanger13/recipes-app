@@ -1,7 +1,6 @@
-package com.dpanger.recipes.home
+package com.dpanger.vehicles.home
 
-import com.dpanger.recipes.data.Recipe
-import com.dpanger.recipes.data.RecipeRepository
+import com.dpanger.vehicles.data.Recipe
 import io.kotest.matchers.shouldBe
 import io.mockk.coEvery
 import io.mockk.mockk
@@ -15,16 +14,14 @@ import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 
-class LoadRecipesUseCaseUnitTest {
-    private val repository: RecipeRepository = mockk()
-    private lateinit var useCase: LoadRecipesUseCase
+class HomeViewModelUnitTest {
+    private val useCase: LoadRecipesUseCase = mockk()
+    private lateinit var viewModel: HomeViewModel
 
     @BeforeEach
     fun setUp() {
         val dispatcher = UnconfinedTestDispatcher()
         Dispatchers.setMain(dispatcher)
-
-        useCase = LoadRecipesUseCase(repository)
     }
 
     @AfterEach
@@ -33,19 +30,23 @@ class LoadRecipesUseCaseUnitTest {
     }
 
     @Test
-    fun whenErrorLoadingData_thenErrorReturned() =
+    fun whenErrorLoadingData_thenUiStateIsError() =
         runTest {
-            coEvery { repository.getRecipes() } returns Result.failure(Exception())
+            coEvery { useCase.invoke() } returns HomeUiState.Error
 
-            useCase.invoke() shouldBe HomeUiState.Error
+            viewModel = HomeViewModel(useCase)
+
+            viewModel.uiState.value shouldBe HomeUiState.Error
         }
 
     @Test
-    fun whenSuccessfullyLoadedData_thenSuccessReturned() =
+    fun whenSuccessfullyLoadedData_thenUiStateIsSuccess() =
         runTest {
             val recipes = emptyList<Recipe>().toImmutableList()
-            coEvery { repository.getRecipes() } returns Result.success(recipes)
+            coEvery { useCase.invoke() } returns HomeUiState.Success(recipes)
 
-            useCase.invoke() shouldBe HomeUiState.Success(recipes)
+            viewModel = HomeViewModel(useCase)
+
+            viewModel.uiState.value shouldBe HomeUiState.Success(recipes)
         }
 }

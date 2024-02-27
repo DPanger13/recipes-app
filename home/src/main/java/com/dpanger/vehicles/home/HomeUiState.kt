@@ -1,6 +1,6 @@
-package com.dpanger.recipes.home
+package com.dpanger.vehicles.home
 
-import com.dpanger.recipes.data.Recipe
+import com.dpanger.vehicles.data.Recipe
 import kotlinx.collections.immutable.ImmutableList
 
 sealed interface HomeUiState {

@@ -1,4 +1,4 @@
-package com.dpanger.recipes.home
+package com.dpanger.vehicles.home
 
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Text
@@ -6,8 +6,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.dpanger.recipes.data.Recipe
-import kotlinx.collections.immutable.toImmutableList
 
 @Composable
 fun HomeScreen(

@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.dpanger.recipes.data"
+    namespace = "com.dpanger.vehicles.data"
 }
 
 dependencies {

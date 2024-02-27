@@ -1,4 +1,4 @@
-package com.dpanger.recipes.data
+package com.dpanger.vehicles.data
 
 interface RecipeRepository {
     suspend fun getRecipes(): Result<List<Recipe>>

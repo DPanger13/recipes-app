@@ -1,11 +1,11 @@
-package com.dpanger.recipes.home
+package com.dpanger.vehicles.home
 
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.dpanger.recipes.data.Recipe
-import com.dpanger.recipes.themes.RecipesTheme
+import com.dpanger.vehicles.data.Recipe
+import com.dpanger.vehicles.themes.VehiclesTheme
 
 @Composable
 internal fun Recipe(
@@ -21,7 +21,7 @@ internal fun Recipe(
 @Composable
 @Preview
 internal fun RecipePreview() {
-    RecipesTheme {
+    VehiclesTheme {
         Recipe(
             recipe = Recipe(
                 title = "Pizza"

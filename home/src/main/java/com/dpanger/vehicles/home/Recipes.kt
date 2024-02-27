@@ -1,12 +1,12 @@
-package com.dpanger.recipes.home
+package com.dpanger.vehicles.home
 
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.dpanger.recipes.data.Recipe
-import com.dpanger.recipes.themes.RecipesTheme
+import com.dpanger.vehicles.data.Recipe
+import com.dpanger.vehicles.themes.VehiclesTheme
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.toImmutableList
 
@@ -25,7 +25,7 @@ internal fun Recipes(
 @Composable
 @Preview
 internal fun RecipesPreview() {
-    RecipesTheme {
+    VehiclesTheme {
         Recipes(
             recipes = listOf(
                 Recipe(

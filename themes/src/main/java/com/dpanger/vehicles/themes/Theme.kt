@@ -1,4 +1,4 @@
-package com.dpanger.recipes.themes
+package com.dpanger.vehicles.themes
 
 import android.app.Activity
 import android.os.Build
@@ -28,7 +28,7 @@ private val LightColorScheme = lightColorScheme(
 )
 
 @Composable
-fun RecipesTheme(
+fun VehiclesTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     dynamicColor: Boolean = true,
     content: @Composable () -> Unit

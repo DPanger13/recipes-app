@@ -1,4 +1,4 @@
-package com.dpanger.recipes.home
+package com.dpanger.vehicles.home
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

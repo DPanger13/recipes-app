@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.dpanger.recipes.home"
+    namespace = "com.dpanger.vehicles.home"
 
     testOptions {
         unitTests.all {
