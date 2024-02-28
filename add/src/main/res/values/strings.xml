@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="failed_to_save_recipe">Failed to save recipe</string>
-    <string name="save_recipe">Save</string>
-</resources>

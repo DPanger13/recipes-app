@@ -6,10 +6,10 @@ plugins {
 }
 
 android {
-    namespace = "com.dpanger.recipes"
+    namespace = "com.dpanger.vehicles"
 
     defaultConfig {
-        applicationId = "com.dpanger.recipes"
+        applicationId = "com.dpanger.vehicles"
         versionCode = 1
         versionName = "0.0"
     }

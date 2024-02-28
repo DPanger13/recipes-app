@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.dpanger.recipes.data"
+    namespace = "com.dpanger.vehicles.data"
 }
 
 dependencies {
@@ -14,4 +14,6 @@ dependencies {
 
     implementation(libs.hilt)
     kapt(libs.hilt.compiler)
+
+    implementation(libs.jna)
 }

@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.dpanger.recipes.home"
+    namespace = "com.dpanger.vehicles.home"
 
     testOptions {
         unitTests.all {
@@ -16,7 +16,7 @@ android {
 }
 
 dependencies {
-    implementation(project(":data-multiplatform"))
+    implementation(project(":data"))
     implementation(project(":themes"))
 
     implementation(libs.core.ktx)

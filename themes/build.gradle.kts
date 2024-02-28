@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.dpanger.recipes.themes"
+    namespace = "com.dpanger.vehicles.themes"
 }
 
 dependencies {
