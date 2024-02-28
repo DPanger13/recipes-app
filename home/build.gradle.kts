@@ -16,7 +16,7 @@ android {
 }
 
 dependencies {
-    implementation(project(":data-multiplatform"))
+    implementation(project(":data"))
     implementation(project(":themes"))
 
     implementation(libs.core.ktx)

@@ -12,16 +12,17 @@ fun HomeScreen(
     viewModel: HomeViewModel,
     modifier: Modifier = Modifier
 ) {
-    when (val uiState = viewModel.uiState.collectAsStateWithLifecycle().value) {
+    val uiStateHolder = viewModel.uiState.collectAsStateWithLifecycle()
+    when (val uiState = uiStateHolder.value) {
         is HomeUiState.Loading -> {
             CircularProgressIndicator(
                 modifier = modifier
             )
         }
         is HomeUiState.Success -> {
-            Recipes(
+            Manufacturers(
                 modifier = modifier,
-                recipes = uiState.recipes
+                manufacturers = uiState.manufacturers
             )
         }
         is HomeUiState.Error -> {

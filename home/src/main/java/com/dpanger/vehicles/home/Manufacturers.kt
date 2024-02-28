@@ -5,19 +5,18 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.dpanger.vehicles.data.Recipe
 import com.dpanger.vehicles.themes.VehiclesTheme
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.toImmutableList
 
 @Composable
-internal fun Recipes(
-    recipes: ImmutableList<Recipe>,
+internal fun Manufacturers(
+    manufacturers: ImmutableList<UiManufacturer>,
     modifier: Modifier = Modifier
 ) {
     LazyColumn(modifier = modifier) {
-        items(recipes) {
-            Recipe(it)
+        items(manufacturers) {
+            Manufacturer(it)
         }
     }
 }
@@ -26,16 +25,19 @@ internal fun Recipes(
 @Preview
 internal fun RecipesPreview() {
     VehiclesTheme {
-        Recipes(
-            recipes = listOf(
-                Recipe(
-                    title = "Pizza"
+        Manufacturers(
+            manufacturers = listOf(
+                UiManufacturer(
+                    id = "0",
+                    name = "Mercedes"
                 ),
-                Recipe(
-                    title = "Pasta"
+                UiManufacturer(
+                    id = "1",
+                    name = "Lexus"
                 ),
-                Recipe(
-                    title = "Salad"
+                UiManufacturer(
+                    id = "2",
+                    name = "Cadillac"
                 )
             ).toImmutableList()
         )

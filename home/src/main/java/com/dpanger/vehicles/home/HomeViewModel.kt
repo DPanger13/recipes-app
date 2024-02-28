@@ -9,14 +9,14 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 class HomeViewModel @Inject internal constructor(
-    private val loadRecipes: LoadRecipesUseCase
+    private val loadManufacturers: LoadManufacturersUseCase
 ) : ViewModel() {
     private val _uiState = MutableStateFlow<HomeUiState>(HomeUiState.Loading)
     val uiState: StateFlow<HomeUiState> = _uiState.asStateFlow()
 
     init {
         viewModelScope.launch {
-            _uiState.value = loadRecipes()
+            _uiState.value = loadManufacturers()
         }
     }
 }

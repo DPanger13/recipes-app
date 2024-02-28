@@ -1,7 +1,6 @@
 package com.dpanger.vehicles.home
 
-import com.dpanger.vehicles.data.Recipe
-import com.dpanger.vehicles.data.RecipeRepository
+import com.dpanger.vehicles.data.ManufacturerRepository
 import io.kotest.matchers.shouldBe
 import io.mockk.coEvery
 import io.mockk.mockk
@@ -14,17 +13,18 @@ import kotlinx.coroutines.test.setMain
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
+import uniffi.vehicles.Manufacturer
 
-class LoadRecipesUseCaseUnitTest {
-    private val repository: RecipeRepository = mockk()
-    private lateinit var useCase: LoadRecipesUseCase
+class LoadManufacturersUseCaseUnitTest {
+    private val repository: ManufacturerRepository = mockk()
+    private lateinit var useCase: LoadManufacturersUseCase
 
     @BeforeEach
     fun setUp() {
         val dispatcher = UnconfinedTestDispatcher()
         Dispatchers.setMain(dispatcher)
 
-        useCase = LoadRecipesUseCase(repository)
+        useCase = LoadManufacturersUseCase(repository)
     }
 
     @AfterEach
@@ -35,7 +35,7 @@ class LoadRecipesUseCaseUnitTest {
     @Test
     fun whenErrorLoadingData_thenErrorReturned() =
         runTest {
-            coEvery { repository.getRecipes() } returns Result.failure(Exception())
+            coEvery { repository.all() } returns Result.failure(Exception())
 
             useCase.invoke() shouldBe HomeUiState.Error
         }
@@ -43,9 +43,10 @@ class LoadRecipesUseCaseUnitTest {
     @Test
     fun whenSuccessfullyLoadedData_thenSuccessReturned() =
         runTest {
-            val recipes = emptyList<Recipe>().toImmutableList()
-            coEvery { repository.getRecipes() } returns Result.success(recipes)
+            val manufacturer = Manufacturer(id = "0", name = "Cadillac")
+            coEvery { repository.all() } returns Result.success(listOf(manufacturer))
 
-            useCase.invoke() shouldBe HomeUiState.Success(recipes)
+            val uiManufacturer = UiManufacturer(id = manufacturer.id, name = manufacturer.name)
+            useCase.invoke() shouldBe HomeUiState.Success(listOf(uiManufacturer).toImmutableList())
         }
 }

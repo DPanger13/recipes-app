@@ -1,6 +1,5 @@
 package com.dpanger.vehicles.home
 
-import com.dpanger.vehicles.data.Recipe
 import io.kotest.matchers.shouldBe
 import io.mockk.coEvery
 import io.mockk.mockk
@@ -15,7 +14,7 @@ import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 
 class HomeViewModelUnitTest {
-    private val useCase: LoadRecipesUseCase = mockk()
+    private val useCase: LoadManufacturersUseCase = mockk()
     private lateinit var viewModel: HomeViewModel
 
     @BeforeEach
@@ -42,11 +41,11 @@ class HomeViewModelUnitTest {
     @Test
     fun whenSuccessfullyLoadedData_thenUiStateIsSuccess() =
         runTest {
-            val recipes = emptyList<Recipe>().toImmutableList()
-            coEvery { useCase.invoke() } returns HomeUiState.Success(recipes)
+            val manufacturers = emptyList<UiManufacturer>().toImmutableList()
+            coEvery { useCase.invoke() } returns HomeUiState.Success(manufacturers)
 
             viewModel = HomeViewModel(useCase)
 
-            viewModel.uiState.value shouldBe HomeUiState.Success(recipes)
+            viewModel.uiState.value shouldBe HomeUiState.Success(manufacturers)
         }
 }
