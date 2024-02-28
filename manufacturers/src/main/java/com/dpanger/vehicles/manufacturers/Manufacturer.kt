@@ -1,4 +1,4 @@
-package com.dpanger.vehicles.home
+package com.dpanger.vehicles.manufacturers
 
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable

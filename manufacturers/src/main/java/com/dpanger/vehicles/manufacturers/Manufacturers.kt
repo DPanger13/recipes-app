@@ -1,4 +1,4 @@
-package com.dpanger.vehicles.home
+package com.dpanger.vehicles.manufacturers
 
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items

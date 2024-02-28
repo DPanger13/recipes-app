@@ -1,4 +1,4 @@
-package com.dpanger.vehicles.home
+package com.dpanger.vehicles.manufacturers
 
 import io.kotest.matchers.shouldBe
 import io.mockk.coEvery
@@ -13,9 +13,9 @@ import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 
-class HomeViewModelUnitTest {
+class ManufacturersViewModelUnitTest {
     private val useCase: LoadManufacturersUseCase = mockk()
-    private lateinit var viewModel: HomeViewModel
+    private lateinit var viewModel: ManufacturersViewModel
 
     @BeforeEach
     fun setUp() {
@@ -31,21 +31,21 @@ class HomeViewModelUnitTest {
     @Test
     fun whenErrorLoadingData_thenUiStateIsError() =
         runTest {
-            coEvery { useCase.invoke() } returns HomeUiState.Error
+            coEvery { useCase.invoke() } returns ManufacturersUiState.Error
 
-            viewModel = HomeViewModel(useCase)
+            viewModel = ManufacturersViewModel(useCase)
 
-            viewModel.uiState.value shouldBe HomeUiState.Error
+            viewModel.uiState.value shouldBe ManufacturersUiState.Error
         }
 
     @Test
     fun whenSuccessfullyLoadedData_thenUiStateIsSuccess() =
         runTest {
             val manufacturers = emptyList<UiManufacturer>().toImmutableList()
-            coEvery { useCase.invoke() } returns HomeUiState.Success(manufacturers)
+            coEvery { useCase.invoke() } returns ManufacturersUiState.Success(manufacturers)
 
-            viewModel = HomeViewModel(useCase)
+            viewModel = ManufacturersViewModel(useCase)
 
-            viewModel.uiState.value shouldBe HomeUiState.Success(manufacturers)
+            viewModel.uiState.value shouldBe ManufacturersUiState.Success(manufacturers)
         }
 }

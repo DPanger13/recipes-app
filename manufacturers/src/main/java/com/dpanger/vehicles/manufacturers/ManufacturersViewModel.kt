@@ -1,4 +1,4 @@
-package com.dpanger.vehicles.home
+package com.dpanger.vehicles.manufacturers
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -8,11 +8,11 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-class HomeViewModel @Inject internal constructor(
+class ManufacturersViewModel @Inject internal constructor(
     private val loadManufacturers: LoadManufacturersUseCase
 ) : ViewModel() {
-    private val _uiState = MutableStateFlow<HomeUiState>(HomeUiState.Loading)
-    val uiState: StateFlow<HomeUiState> = _uiState.asStateFlow()
+    private val _uiState = MutableStateFlow<ManufacturersUiState>(ManufacturersUiState.Loading)
+    val uiState: StateFlow<ManufacturersUiState> = _uiState.asStateFlow()
 
     init {
         viewModelScope.launch {
