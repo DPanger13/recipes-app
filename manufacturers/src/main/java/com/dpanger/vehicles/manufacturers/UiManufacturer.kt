@@ -1,4 +1,4 @@
-package com.dpanger.vehicles.home
+package com.dpanger.vehicles.manufacturers
 
 data class UiManufacturer(
     val id: String,

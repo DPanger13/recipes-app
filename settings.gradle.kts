@@ -17,5 +17,5 @@ dependencyResolutionManagement {
 rootProject.name = "Vehicles-Android"
 include(":app")
 include(":themes")
-include(":home")
+include(":manufacturers")
 include(":data")

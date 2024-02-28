@@ -24,7 +24,7 @@ android {
 
 dependencies {
     implementation(project(":themes"))
-    implementation(project(":home"))
+    implementation(project(":manufacturers"))
 
     implementation(libs.core.ktx)
     implementation(libs.lifecycle.runtime.ktx)

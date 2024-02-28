@@ -1,4 +1,4 @@
-package com.dpanger.vehicles.home
+package com.dpanger.vehicles.manufacturers
 
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Text
@@ -8,24 +8,24 @@ import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 
 @Composable
-fun HomeScreen(
-    viewModel: HomeViewModel,
+fun ManufacturersScreen(
+    viewModel: ManufacturersViewModel,
     modifier: Modifier = Modifier
 ) {
     val uiStateHolder = viewModel.uiState.collectAsStateWithLifecycle()
     when (val uiState = uiStateHolder.value) {
-        is HomeUiState.Loading -> {
+        is ManufacturersUiState.Loading -> {
             CircularProgressIndicator(
                 modifier = modifier
             )
         }
-        is HomeUiState.Success -> {
+        is ManufacturersUiState.Success -> {
             Manufacturers(
                 modifier = modifier,
                 manufacturers = uiState.manufacturers
             )
         }
-        is HomeUiState.Error -> {
+        is ManufacturersUiState.Error -> {
             Text(
                 text = stringResource(id = R.string.generic_error_message)
             )

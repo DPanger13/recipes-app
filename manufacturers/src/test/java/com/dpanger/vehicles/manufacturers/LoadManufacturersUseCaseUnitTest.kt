@@ -1,4 +1,4 @@
-package com.dpanger.vehicles.home
+package com.dpanger.vehicles.manufacturers
 
 import com.dpanger.vehicles.data.ManufacturerRepository
 import io.kotest.matchers.shouldBe
@@ -37,7 +37,7 @@ class LoadManufacturersUseCaseUnitTest {
         runTest {
             coEvery { repository.all() } returns Result.failure(Exception())
 
-            useCase.invoke() shouldBe HomeUiState.Error
+            useCase.invoke() shouldBe ManufacturersUiState.Error
         }
 
     @Test
@@ -47,6 +47,6 @@ class LoadManufacturersUseCaseUnitTest {
             coEvery { repository.all() } returns Result.success(listOf(manufacturer))
 
             val uiManufacturer = UiManufacturer(id = manufacturer.id, name = manufacturer.name)
-            useCase.invoke() shouldBe HomeUiState.Success(listOf(uiManufacturer).toImmutableList())
+            useCase.invoke() shouldBe ManufacturersUiState.Success(listOf(uiManufacturer).toImmutableList())
         }
 }

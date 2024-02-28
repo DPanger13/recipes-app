@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.dpanger.vehicles.home"
+    namespace = "com.dpanger.vehicles.manufacturers"
 
     testOptions {
         unitTests.all {
