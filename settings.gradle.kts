@@ -18,5 +18,4 @@ rootProject.name = "Vehicles-Android"
 include(":app")
 include(":themes")
 include(":home")
-include(":data-multiplatform")
 include(":data")

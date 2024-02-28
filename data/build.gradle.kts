@@ -10,8 +10,6 @@ android {
 }
 
 dependencies {
-    implementation(project(":data-multiplatform"))
-
     implementation(libs.hilt)
     kapt(libs.hilt.compiler)
 
