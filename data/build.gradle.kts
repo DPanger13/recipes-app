@@ -13,5 +13,9 @@ dependencies {
     implementation(libs.hilt)
     kapt(libs.hilt.compiler)
 
-    implementation(libs.jna)
+    implementation(libs.jna) {
+        artifact {
+            type = "aar"
+        }
+    }
 }
