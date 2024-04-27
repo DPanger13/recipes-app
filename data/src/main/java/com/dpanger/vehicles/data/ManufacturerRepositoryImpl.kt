@@ -1,5 +1,6 @@
 package com.dpanger.vehicles.data
 
+import android.util.Log
 import uniffi.vehicles.Manufacturer
 import uniffi.vehicles.VehiclesException
 import uniffi.vehicles.manufacturers
@@ -9,7 +10,8 @@ internal class ManufacturerRepositoryImpl : ManufacturerRepository {
         try {
             val manufacturers = manufacturers()
             Result.success(manufacturers)
-        } catch (_: VehiclesException) {
-            Result.failure(Exception())
+        } catch (exception: VehiclesException) {
+            Log.e("Manufacturers", "Failed fetching manufacturers", exception)
+            Result.failure(exception)
         }
 }

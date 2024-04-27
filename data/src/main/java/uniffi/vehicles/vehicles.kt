@@ -650,10 +650,11 @@ public object FfiConverterTypeManufacturer: FfiConverterRustBuffer<Manufacturer>
 sealed class VehiclesException: Exception() {
     // Each variant is a nested class
     
-    class Fetch(
+    class Generic(
+        val `sourceMessage`: String
         ) : VehiclesException() {
         override val message
-            get() = ""
+            get() = "sourceMessage=${ `sourceMessage` }"
     }
     
 
@@ -669,24 +670,28 @@ public object FfiConverterTypeVehiclesError : FfiConverterRustBuffer<VehiclesExc
         
 
         return when(buf.getInt()) {
-            1 -> VehiclesException.Fetch()
+            1 -> VehiclesException.Generic(
+                FfiConverterString.read(buf),
+                )
             else -> throw RuntimeException("invalid error enum value, something is very wrong!!")
         }
     }
 
     override fun allocationSize(value: VehiclesException): Int {
         return when(value) {
-            is VehiclesException.Fetch -> (
+            is VehiclesException.Generic -> (
                 // Add the size for the Int that specifies the variant plus the size needed for all fields
                 4
+                + FfiConverterString.allocationSize(value.`sourceMessage`)
             )
         }
     }
 
     override fun write(value: VehiclesException, buf: ByteBuffer) {
         when(value) {
-            is VehiclesException.Fetch -> {
+            is VehiclesException.Generic -> {
                 buf.putInt(1)
+                FfiConverterString.write(value.`sourceMessage`, buf)
                 Unit
             }
         }.let { /* this makes the `when` an expression, which ensures it is exhaustive */ }
