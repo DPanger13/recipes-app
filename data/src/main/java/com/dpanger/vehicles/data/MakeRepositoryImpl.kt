@@ -6,12 +6,11 @@ import uniffi.vehicles.VehiclesException
 import uniffi.vehicles.makes
 
 internal class MakeRepositoryImpl : MakeRepository {
-    override fun forManufacturer(id: String): Result<List<Make>> =
+    override fun forManufacturer(id: String): List<Make>? =
         try {
-            val makes = makes(id)
-            Result.success(makes)
+            makes(id)
         } catch (exception: VehiclesException) {
             Log.e("Makes", "Failed fetching makes", exception)
-            Result.failure(exception)
+            null
         }
 }

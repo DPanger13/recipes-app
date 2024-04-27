@@ -6,12 +6,11 @@ import uniffi.vehicles.VehiclesException
 import uniffi.vehicles.manufacturers
 
 internal class ManufacturerRepositoryImpl : ManufacturerRepository {
-    override suspend fun all(): Result<List<Manufacturer>> =
+    override suspend fun all(): List<Manufacturer>? =
         try {
-            val manufacturers = manufacturers()
-            Result.success(manufacturers)
+            manufacturers()
         } catch (exception: VehiclesException) {
             Log.e("Manufacturers", "Failed fetching manufacturers", exception)
-            Result.failure(exception)
+            null
         }
 }

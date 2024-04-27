@@ -7,16 +7,14 @@ import javax.inject.Inject
 internal class LoadManufacturersUseCase @Inject constructor(
     private val repository: ManufacturerRepository
 ) {
-    suspend operator fun invoke(): ManufacturersUiState {
-        val result = repository.all()
-        return when {
-            result.isSuccess -> {
+    suspend operator fun invoke(): ManufacturersUiState =
+        when (val result = repository.all()) {
+            null -> ManufacturersUiState.Error
+            else -> {
                 val manufacturers = result
-                    .getOrThrow()
                     .map { UiManufacturer(id = it.id, name = it.name) }
-                ManufacturersUiState.Success(manufacturers.toImmutableList())
+                    .toImmutableList()
+                ManufacturersUiState.Success(manufacturers)
             }
-            else -> ManufacturersUiState.Error
         }
-    }
 }
