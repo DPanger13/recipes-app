@@ -35,7 +35,7 @@ class LoadManufacturersUseCaseUnitTest {
     @Test
     fun whenErrorLoadingData_thenErrorReturned() =
         runTest {
-            coEvery { repository.all() } returns Result.failure(Exception())
+            coEvery { repository.all() } returns null
 
             useCase.invoke() shouldBe ManufacturersUiState.Error
         }
@@ -44,7 +44,7 @@ class LoadManufacturersUseCaseUnitTest {
     fun whenSuccessfullyLoadedData_thenSuccessReturned() =
         runTest {
             val manufacturer = Manufacturer(id = "0", name = "Cadillac")
-            coEvery { repository.all() } returns Result.success(listOf(manufacturer))
+            coEvery { repository.all() } returns listOf(manufacturer)
 
             val uiManufacturer = UiManufacturer(id = manufacturer.id, name = manufacturer.name)
             useCase.invoke() shouldBe ManufacturersUiState.Success(listOf(uiManufacturer).toImmutableList())
