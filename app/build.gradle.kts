@@ -11,7 +11,7 @@ android {
     defaultConfig {
         applicationId = "com.dpanger.vehicles"
         versionCode = 1
-        versionName = "0.0"
+        versionName = "1.0"
     }
 
     buildTypes {
