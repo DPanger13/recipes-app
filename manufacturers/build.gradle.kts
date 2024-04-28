@@ -18,6 +18,7 @@ android {
 dependencies {
     implementation(project(":data"))
     implementation(project(":themes"))
+    implementation(project(":ui-components"))
 
     implementation(libs.core.ktx)
 

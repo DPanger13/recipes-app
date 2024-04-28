@@ -6,6 +6,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.dpanger.vehicles.themes.VehiclesTheme
+import com.dpanger.vehicles.uicomponents.lists.SingleLineItem
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.toImmutableList
 
@@ -16,7 +17,9 @@ internal fun Manufacturers(
 ) {
     LazyColumn(modifier = modifier) {
         items(manufacturers) {
-            Manufacturer(it)
+            SingleLineItem(
+                text = it.name
+            )
         }
     }
 }
