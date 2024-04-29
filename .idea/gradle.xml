@@ -25,6 +25,7 @@
             <option value="$PROJECT_DIR$/data" />
             <option value="$PROJECT_DIR$/manufacturers" />
             <option value="$PROJECT_DIR$/themes" />
+            <option value="$PROJECT_DIR$/ui-components" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />
