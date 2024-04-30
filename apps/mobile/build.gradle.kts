@@ -23,6 +23,7 @@ android {
 }
 
 dependencies {
+    implementation(project(":features:makes"))
     implementation(project(":features:manufacturers"))
     implementation(project(":ui:themes"))
 
