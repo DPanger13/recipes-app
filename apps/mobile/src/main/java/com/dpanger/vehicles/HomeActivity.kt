@@ -19,15 +19,9 @@ class HomeActivity : ComponentActivity() {
 
         setContent {
             VehiclesTheme {
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    ManufacturersScreen(
-                        modifier = Modifier.fillMaxSize(),
-                        viewModel = hiltViewModel()
-                    )
-                }
+                VehiclesApp(
+                    modifier = Modifier.fillMaxSize()
+                )
             }
         }
     }

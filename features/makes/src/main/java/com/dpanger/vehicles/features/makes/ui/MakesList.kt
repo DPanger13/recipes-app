@@ -1,22 +1,23 @@
-package com.dpanger.vehicles.features.manufacturers
+package com.dpanger.vehicles.features.makes.ui
 
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.dpanger.vehicles.features.makes.viewmodel.UiMake
 import com.dpanger.vehicles.ui.themes.VehiclesTheme
 import com.dpanger.vehicles.uicomponents.components.lists.SingleLineItem
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.toImmutableList
 
 @Composable
-internal fun Manufacturers(
-    manufacturers: ImmutableList<UiManufacturer>,
+internal fun MakesList(
+    makes: ImmutableList<UiMake>,
     modifier: Modifier = Modifier
 ) {
     LazyColumn(modifier = modifier) {
-        items(manufacturers) {
+        items(makes) {
             SingleLineItem(
                 text = it.name
             )
@@ -24,24 +25,21 @@ internal fun Manufacturers(
     }
 }
 
-@Composable
 @Preview
-internal fun RecipesPreview() {
+@Composable
+private fun MakesListPreview() {
     VehiclesTheme {
-        Manufacturers(
-            manufacturers = listOf(
-                UiManufacturer(
-                    id = "0",
-                    name = "Mercedes"
+        MakesList(
+            makes = listOf(
+                UiMake(
+                    name = "Honda"
                 ),
-                UiManufacturer(
-                    id = "1",
-                    name = "Lexus"
+                UiMake(
+                    name = "Toyota"
                 ),
-                UiManufacturer(
-                    id = "2",
-                    name = "Cadillac"
-                )
+                UiMake(
+                    name = "Nissan"
+                ),
             ).toImmutableList()
         )
     }

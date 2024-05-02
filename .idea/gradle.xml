@@ -25,6 +25,7 @@
             <option value="$PROJECT_DIR$/build-logic" />
             <option value="$PROJECT_DIR$/data" />
             <option value="$PROJECT_DIR$/features" />
+            <option value="$PROJECT_DIR$/features/makes" />
             <option value="$PROJECT_DIR$/features/manufacturers" />
             <option value="$PROJECT_DIR$/ui" />
             <option value="$PROJECT_DIR$/ui/components" />

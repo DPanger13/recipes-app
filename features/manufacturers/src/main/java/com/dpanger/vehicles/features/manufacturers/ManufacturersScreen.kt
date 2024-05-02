@@ -1,34 +1,36 @@
 package com.dpanger.vehicles.features.manufacturers
 
-import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.dpanger.vehicles.features.manufacturers.R
+import com.dpanger.vehicles.uicomponents.components.error.ErrorMessage
+import com.dpanger.vehicles.uicomponents.components.progress.ProgressIndicator
+
+const val ROUTE_MANUFACTURERS = "manufacturers"
 
 @Composable
 fun ManufacturersScreen(
     viewModel: ManufacturersViewModel,
+    onManufacturerClicked: (String) -> Unit,
     modifier: Modifier = Modifier
 ) {
     val uiStateHolder = viewModel.uiState.collectAsStateWithLifecycle()
     when (val uiState = uiStateHolder.value) {
         is ManufacturersUiState.Loading -> {
-            CircularProgressIndicator(
+            ProgressIndicator(
                 modifier = modifier
             )
         }
         is ManufacturersUiState.Success -> {
-            Manufacturers(
+            ManufacturersList(
                 modifier = modifier,
-                manufacturers = uiState.manufacturers
+                manufacturers = uiState.manufacturers,
+                onManufacturerClicked = onManufacturerClicked
             )
         }
         is ManufacturersUiState.Error -> {
-            Text(
-                text = stringResource(id = R.string.generic_error_message)
+            ErrorMessage(
+                modifier = modifier
             )
         }
     }

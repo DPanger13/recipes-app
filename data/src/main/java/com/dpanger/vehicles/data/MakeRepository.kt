@@ -1,10 +1,11 @@
 package com.dpanger.vehicles.data
 
 import uniffi.vehicles.Make
+import kotlin.coroutines.CoroutineContext
 
 interface MakeRepository {
-    fun forManufacturer(id: String): List<Make>?
+    suspend fun forManufacturer(id: String): List<Make>?
 }
 
-fun makeRepository(): MakeRepository =
-    MakeRepositoryImpl()
+fun makeRepository(coroutineContext: CoroutineContext): MakeRepository =
+    MakeRepositoryImpl(coroutineContext)
