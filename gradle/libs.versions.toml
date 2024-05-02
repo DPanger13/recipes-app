@@ -1,23 +1,25 @@
 [versions]
-agp = "8.2.2"
-kotlin = "1.9.0"
-core-ktx = "1.12.0"
-junit5 = "5.8.2"
-lifecycle = "2.6.2"
 activity-compose = "1.8.1"
+agp = "8.2.2"
 compose-bom = "2023.10.01"
 compose-compiler = "1.5.2"
-kotlinx-collections = "0.3.6"
+core-ktx = "1.12.0"
+coroutines-test = "1.7.3"
 hilt = "2.49"
 hilt-navigation-compose = "1.1.0"
 jna = "5.14.0"
-mockk = "1.13.8"
+junit5 = "5.8.2"
 kotest = "5.8.0"
-coroutines-test = "1.7.3"
+kotlin = "1.9.0"
+kotlinx-collections = "0.3.6"
+ktlint = "12.1.0"
+lifecycle = "2.6.2"
+mockk = "1.13.8"
 
 [libraries]
 android-gradle = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
 kotlin-gradle = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+ktlint-gradle = { group = "org.jlleitschuh.gradle", name = "ktlint-gradle", version.ref = "ktlint" }
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
 lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycle" }
 activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activity-compose" }
@@ -46,6 +48,7 @@ android-library = { id = "com.android.library", version.ref = "agp" }
 hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlint" }
 
 [bundles]
 compose = [ "collections", "material3", "lifecycle-runtime-compose", "ui-tooling-preview", "ui-graphics", "ui" ]
