@@ -1,5 +1,7 @@
 package com.dpanger.vehicles.data
 
+import com.dpanger.vehicles.data.makes.makeRepository
+import com.dpanger.vehicles.data.manufacturers.manufacturerRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

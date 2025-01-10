@@ -1,6 +1,7 @@
 package com.dpanger.vehicles.features.makes.domain
 
-import com.dpanger.vehicles.data.MakeRepository
+import com.dpanger.vehicles.data.makes.Make
+import com.dpanger.vehicles.data.makes.MakeRepository
 import com.dpanger.vehicles.features.makes.viewmodel.MakesUiState
 import com.dpanger.vehicles.features.makes.viewmodel.UiMake
 import io.kotest.matchers.shouldBe
@@ -9,7 +10,6 @@ import io.mockk.mockk
 import kotlinx.collections.immutable.toImmutableList
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.Test
-import uniffi.vehicles.Make
 
 internal class LoadMakesUseCaseTest {
     private companion object {
