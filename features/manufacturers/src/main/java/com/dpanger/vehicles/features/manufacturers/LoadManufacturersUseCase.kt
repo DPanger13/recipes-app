@@ -1,6 +1,6 @@
 package com.dpanger.vehicles.features.manufacturers
 
-import com.dpanger.vehicles.data.ManufacturerRepository
+import com.dpanger.vehicles.data.manufacturers.ManufacturerRepository
 import kotlinx.collections.immutable.toImmutableList
 import javax.inject.Inject
 

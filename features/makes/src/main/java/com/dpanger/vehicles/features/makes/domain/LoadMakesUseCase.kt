@@ -1,6 +1,6 @@
 package com.dpanger.vehicles.features.makes.domain
 
-import com.dpanger.vehicles.data.MakeRepository
+import com.dpanger.vehicles.data.makes.MakeRepository
 import com.dpanger.vehicles.features.makes.viewmodel.MakesUiState
 import com.dpanger.vehicles.features.makes.viewmodel.UiMake
 import kotlinx.collections.immutable.toImmutableList

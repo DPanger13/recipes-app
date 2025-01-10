@@ -1,9 +1,7 @@
 package com.dpanger.vehicles.features.manufacturers
 
-import com.dpanger.vehicles.data.ManufacturerRepository
-import com.dpanger.vehicles.features.manufacturers.LoadManufacturersUseCase
-import com.dpanger.vehicles.features.manufacturers.ManufacturersUiState
-import com.dpanger.vehicles.features.manufacturers.UiManufacturer
+import com.dpanger.vehicles.data.manufacturers.Manufacturer
+import com.dpanger.vehicles.data.manufacturers.ManufacturerRepository
 import io.kotest.matchers.shouldBe
 import io.mockk.coEvery
 import io.mockk.mockk
@@ -16,7 +14,6 @@ import kotlinx.coroutines.test.setMain
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
-import uniffi.vehicles.Manufacturer
 
 class LoadManufacturersUseCaseUnitTest {
     private val repository: ManufacturerRepository = mockk()
