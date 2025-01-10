@@ -10,6 +10,8 @@ android {
 }
 
 dependencies {
+    implementation(project(":vehicles"))
+
     implementation(libs.hilt)
     kapt(libs.hilt.compiler)
 
