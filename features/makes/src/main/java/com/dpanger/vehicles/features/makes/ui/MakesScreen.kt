@@ -10,12 +10,12 @@ import com.dpanger.vehicles.features.makes.viewmodel.MakesViewModel
 fun MakesScreen(
     viewModel: MakesViewModel,
     manufacturerId: String,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
 ) {
     val uiStateHolder = viewModel.uiState.collectAsStateWithLifecycle()
     MakesContent(
         modifier = modifier,
-        uiState = uiStateHolder.value
+        uiState = uiStateHolder.value,
     )
 
     LaunchedEffect(Unit) {

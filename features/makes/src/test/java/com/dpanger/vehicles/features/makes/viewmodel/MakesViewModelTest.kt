@@ -57,6 +57,5 @@ internal class MakesViewModelTest {
 
         val uiState = viewModel.uiState.value
         (uiState as MakesUiState.Success).makes shouldBe makes
-
     }
 }

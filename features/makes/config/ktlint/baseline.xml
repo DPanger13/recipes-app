@@ -1,63 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <baseline version="1.0">
-    <file name="src/main/java/com/dpanger/vehicles/features/makes/domain/LoadMakesUseCase.kt">
-        <error line="1" column="1" source="standard:final-newline" />
-        <error line="9" column="32" source="standard:annotation" />
-        <error line="9" column="40" source="standard:annotation" />
-        <error line="10" column="43" source="standard:trailing-comma-on-declaration-site" />
-        <error line="16" column="29" source="standard:multiline-expression-wrapping" />
-        <error line="17" column="1" source="standard:indent" />
-        <error line="18" column="1" source="standard:indent" />
-    </file>
     <file name="src/main/java/com/dpanger/vehicles/features/makes/ui/MakesContent.kt">
         <error line="14" column="14" source="standard:function-naming" />
-        <error line="22" column="40" source="standard:trailing-comma-on-call-site" />
-        <error line="28" column="40" source="standard:trailing-comma-on-call-site" />
-        <error line="33" column="40" source="standard:trailing-comma-on-call-site" />
         <error line="42" column="13" source="standard:function-naming" />
-        <error line="44" column="19" source="standard:multiline-expression-wrapping" />
-        <error line="45" column="21" source="standard:multiline-expression-wrapping" />
-        <error line="47" column="35" source="standard:trailing-comma-on-call-site" />
-        <error line="48" column="18" source="standard:trailing-comma-on-call-site" />
-        <error line="49" column="32" source="standard:trailing-comma-on-call-site" />
-        <error line="50" column="10" source="standard:trailing-comma-on-call-site" />
     </file>
     <file name="src/main/java/com/dpanger/vehicles/features/makes/ui/MakesList.kt">
-        <error line="1" column="1" source="standard:final-newline" />
         <error line="15" column="14" source="standard:function-naming" />
-        <error line="17" column="34" source="standard:trailing-comma-on-declaration-site" />
-        <error line="22" column="31" source="standard:trailing-comma-on-call-site" />
         <error line="30" column="13" source="standard:function-naming" />
-        <error line="33" column="21" source="standard:multiline-expression-wrapping" />
-        <error line="35" column="35" source="standard:trailing-comma-on-call-site" />
-        <error line="38" column="36" source="standard:trailing-comma-on-call-site" />
-        <error line="41" column="36" source="standard:trailing-comma-on-call-site" />
-        <error line="43" column="32" source="standard:trailing-comma-on-call-site" />
     </file>
     <file name="src/main/java/com/dpanger/vehicles/features/makes/ui/MakesScreen.kt">
-        <error line="1" column="1" source="standard:final-newline" />
         <error line="10" column="5" source="standard:function-naming" />
-        <error line="13" column="34" source="standard:trailing-comma-on-declaration-site" />
-        <error line="18" column="38" source="standard:trailing-comma-on-call-site" />
-    </file>
-    <file name="src/main/java/com/dpanger/vehicles/features/makes/viewmodel/MakesUiState.kt">
-        <error line="1" column="1" source="standard:final-newline" />
-        <error line="7" column="5" source="standard:blank-line-before-declaration" />
-        <error line="8" column="5" source="standard:blank-line-before-declaration" />
-    </file>
-    <file name="src/main/java/com/dpanger/vehicles/features/makes/viewmodel/MakesViewModel.kt">
-        <error line="1" column="1" source="standard:final-newline" />
-        <error line="14" column="21" source="standard:annotation" />
-        <error line="14" column="29" source="standard:annotation" />
-    </file>
-    <file name="src/main/java/com/dpanger/vehicles/features/makes/viewmodel/UiMake.kt">
-        <error line="4" column="21" source="standard:trailing-comma-on-declaration-site" />
-    </file>
-    <file name="src/test/java/com/dpanger/vehicles/features/makes/domain/LoadMakesUseCaseTest.kt">
-        <error line="1" column="1" source="standard:final-newline" />
-    </file>
-    <file name="src/test/java/com/dpanger/vehicles/features/makes/viewmodel/MakesViewModelTest.kt">
-        <error line="1" column="1" source="standard:final-newline" />
-        <error line="60" column="1" source="standard:no-blank-line-before-rbrace" />
     </file>
 </baseline>

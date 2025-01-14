@@ -14,12 +14,12 @@ import kotlinx.collections.immutable.toImmutableList
 @Composable
 internal fun MakesList(
     makes: ImmutableList<UiMake>,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
 ) {
     LazyColumn(modifier = modifier) {
         items(makes) {
             SingleLineItem(
-                text = it.name
+                text = it.name,
             )
         }
     }
@@ -30,17 +30,18 @@ internal fun MakesList(
 private fun MakesListPreview() {
     VehiclesTheme {
         MakesList(
-            makes = listOf(
-                UiMake(
-                    name = "Honda"
-                ),
-                UiMake(
-                    name = "Toyota"
-                ),
-                UiMake(
-                    name = "Nissan"
-                ),
-            ).toImmutableList()
+            makes =
+                listOf(
+                    UiMake(
+                        name = "Honda",
+                    ),
+                    UiMake(
+                        name = "Toyota",
+                    ),
+                    UiMake(
+                        name = "Nissan",
+                    ),
+                ).toImmutableList(),
         )
     }
 }

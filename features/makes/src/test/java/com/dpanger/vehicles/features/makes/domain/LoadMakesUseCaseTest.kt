@@ -1,7 +1,7 @@
 package com.dpanger.vehicles.features.makes.domain
 
-import com.dpanger.vehicles.data.makes.Make
-import com.dpanger.vehicles.data.makes.MakeRepository
+import com.dpanger.vehicles.features.makes.data.Make
+import com.dpanger.vehicles.features.makes.data.MakeRepository
 import com.dpanger.vehicles.features.makes.viewmodel.MakesUiState
 import com.dpanger.vehicles.features.makes.viewmodel.UiMake
 import io.kotest.matchers.shouldBe
