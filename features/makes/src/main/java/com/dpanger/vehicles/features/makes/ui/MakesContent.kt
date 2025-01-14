@@ -19,18 +19,18 @@ internal fun MakesContent(
         when (it) {
             is MakesUiState.Loading -> {
                 ProgressIndicator(
-                    modifier = modifier
+                    modifier = modifier,
                 )
             }
             is MakesUiState.Success -> {
                 MakesList(
                     makes = it.makes,
-                    modifier = modifier
+                    modifier = modifier,
                 )
             }
             is MakesUiState.Error -> {
                 ErrorMessage(
-                    modifier = modifier
+                    modifier = modifier,
                 )
             }
         }
@@ -41,12 +41,14 @@ internal fun MakesContent(
 @Composable
 private fun MakesContentPreview() {
     MakesContent(
-        uiState = MakesUiState.Success(
-            makes = listOf(
-                UiMake(
-                    name = "Honda"
-                )
-            ).toImmutableList()
-        )
+        uiState =
+            MakesUiState.Success(
+                makes =
+                    listOf(
+                        UiMake(
+                            name = "Honda",
+                        ),
+                    ).toImmutableList(),
+            ),
     )
 }
