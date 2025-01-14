@@ -1,7 +1,7 @@
 package com.dpanger.vehicles.features.manufacturers.domain
 
-import com.dpanger.vehicles.data.manufacturers.Manufacturer
-import com.dpanger.vehicles.data.manufacturers.ManufacturerRepository
+import com.dpanger.vehicles.features.manufacturers.data.Manufacturer
+import com.dpanger.vehicles.features.manufacturers.data.ManufacturerRepository
 import com.dpanger.vehicles.features.manufacturers.viewmodel.ManufacturersUiState
 import com.dpanger.vehicles.features.manufacturers.viewmodel.UiManufacturer
 import io.kotest.matchers.shouldBe

@@ -1,4 +1,4 @@
-package com.dpanger.vehicles.data.manufacturers
+package com.dpanger.vehicles.features.manufacturers.data
 
 interface ManufacturerRepository {
     suspend fun all(): List<Manufacturer>?

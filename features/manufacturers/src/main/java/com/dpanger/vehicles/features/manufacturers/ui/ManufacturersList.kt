@@ -17,14 +17,15 @@ import kotlinx.collections.immutable.toImmutableList
 internal fun ManufacturersList(
     manufacturers: ImmutableList<UiManufacturer>,
     onManufacturerClicked: (String) -> Unit,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
 ) {
     LazyColumn(modifier = modifier) {
         items(manufacturers) {
             SingleLineItem(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .clickable { onManufacturerClicked(it.id) },
+                modifier =
+                    Modifier
+                        .fillMaxWidth()
+                        .clickable { onManufacturerClicked(it.id) },
                 text = it.name,
             )
         }
@@ -36,21 +37,22 @@ internal fun ManufacturersList(
 internal fun RecipesPreview() {
     VehiclesTheme {
         ManufacturersList(
-            manufacturers = listOf(
-                UiManufacturer(
-                    id = "0",
-                    name = "Mercedes"
-                ),
-                UiManufacturer(
-                    id = "1",
-                    name = "Lexus"
-                ),
-                UiManufacturer(
-                    id = "2",
-                    name = "Cadillac"
-                )
-            ).toImmutableList(),
-            onManufacturerClicked = {}
+            manufacturers =
+                listOf(
+                    UiManufacturer(
+                        id = "0",
+                        name = "Mercedes",
+                    ),
+                    UiManufacturer(
+                        id = "1",
+                        name = "Lexus",
+                    ),
+                    UiManufacturer(
+                        id = "2",
+                        name = "Cadillac",
+                    ),
+                ).toImmutableList(),
+            onManufacturerClicked = {},
         )
     }
 }

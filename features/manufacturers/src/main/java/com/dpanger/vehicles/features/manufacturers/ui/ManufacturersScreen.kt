@@ -14,25 +14,25 @@ const val ROUTE_MANUFACTURERS = "manufacturers"
 fun ManufacturersScreen(
     viewModel: ManufacturersViewModel,
     onManufacturerClicked: (String) -> Unit,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
 ) {
     val uiStateHolder = viewModel.uiState.collectAsStateWithLifecycle()
     when (val uiState = uiStateHolder.value) {
         is ManufacturersUiState.Loading -> {
             ProgressIndicator(
-                modifier = modifier
+                modifier = modifier,
             )
         }
         is ManufacturersUiState.Success -> {
             ManufacturersList(
                 modifier = modifier,
                 manufacturers = uiState.manufacturers,
-                onManufacturerClicked = onManufacturerClicked
+                onManufacturerClicked = onManufacturerClicked,
             )
         }
         is ManufacturersUiState.Error -> {
             ErrorMessage(
-                modifier = modifier
+                modifier = modifier,
             )
         }
     }

@@ -11,15 +11,17 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class ManufacturersViewModel @Inject internal constructor(
-    private val loadManufacturers: LoadManufacturersUseCase
-) : ViewModel() {
-    private val _uiState = MutableStateFlow<ManufacturersUiState>(ManufacturersUiState.Loading)
-    val uiState: StateFlow<ManufacturersUiState> = _uiState.asStateFlow()
+class ManufacturersViewModel
+    @Inject
+    internal constructor(
+        private val loadManufacturers: LoadManufacturersUseCase,
+    ) : ViewModel() {
+        private val _uiState = MutableStateFlow<ManufacturersUiState>(ManufacturersUiState.Loading)
+        val uiState: StateFlow<ManufacturersUiState> = _uiState.asStateFlow()
 
-    init {
-        viewModelScope.launch {
-            _uiState.value = loadManufacturers()
+        init {
+            viewModelScope.launch {
+                _uiState.value = loadManufacturers()
+            }
         }
     }
-}

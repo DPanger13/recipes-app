@@ -16,7 +16,7 @@ class HomeActivity : ComponentActivity() {
         setContent {
             VehiclesTheme {
                 VehiclesApp(
-                    modifier = Modifier.fillMaxSize()
+                    modifier = Modifier.fillMaxSize(),
                 )
             }
         }

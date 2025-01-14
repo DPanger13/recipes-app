@@ -1,56 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <baseline version="1.0">
-    <file name="src/main/java/com/dpanger/vehicles/features/manufacturers/LoadManufacturersUseCase.kt">
-        <error line="1" column="1" source="standard:final-newline" />
-        <error line="7" column="40" source="standard:annotation" />
-        <error line="7" column="48" source="standard:annotation" />
-        <error line="8" column="51" source="standard:trailing-comma-on-declaration-site" />
-        <error line="14" column="37" source="standard:multiline-expression-wrapping" />
+    <file name="src/main/java/com/dpanger/vehicles/features/manufacturers/ui/ManufacturersList.kt">
+        <error line="17" column="14" source="standard:function-naming" />
+        <error line="37" column="14" source="standard:function-naming" />
     </file>
-    <file name="src/main/java/com/dpanger/vehicles/features/manufacturers/ManufacturersList.kt">
-        <error line="16" column="14" source="standard:function-naming" />
-        <error line="19" column="34" source="standard:trailing-comma-on-declaration-site" />
-        <error line="24" column="28" source="standard:multiline-expression-wrapping" />
-        <error line="35" column="14" source="standard:function-naming" />
-        <error line="38" column="29" source="standard:multiline-expression-wrapping" />
-        <error line="41" column="38" source="standard:trailing-comma-on-call-site" />
-        <error line="45" column="35" source="standard:trailing-comma-on-call-site" />
-        <error line="49" column="38" source="standard:trailing-comma-on-call-site" />
-        <error line="50" column="18" source="standard:trailing-comma-on-call-site" />
-        <error line="52" column="39" source="standard:trailing-comma-on-call-site" />
-    </file>
-    <file name="src/main/java/com/dpanger/vehicles/features/manufacturers/ManufacturersScreen.kt">
-        <error line="12" column="5" source="standard:function-naming" />
-        <error line="15" column="34" source="standard:trailing-comma-on-declaration-site" />
-        <error line="21" column="36" source="standard:trailing-comma-on-call-site" />
-        <error line="28" column="62" source="standard:trailing-comma-on-call-site" />
-        <error line="33" column="36" source="standard:trailing-comma-on-call-site" />
-    </file>
-    <file name="src/main/java/com/dpanger/vehicles/features/manufacturers/ManufacturersUiState.kt">
-        <error line="1" column="1" source="standard:final-newline" />
-        <error line="7" column="5" source="standard:blank-line-before-declaration" />
-        <error line="8" column="5" source="standard:blank-line-before-declaration" />
-    </file>
-    <file name="src/main/java/com/dpanger/vehicles/features/manufacturers/ManufacturersViewModel.kt">
-        <error line="1" column="1" source="standard:final-newline" />
-        <error line="13" column="29" source="standard:annotation" />
-        <error line="13" column="37" source="standard:annotation" />
-        <error line="14" column="60" source="standard:trailing-comma-on-declaration-site" />
-    </file>
-    <file name="src/main/java/com/dpanger/vehicles/features/manufacturers/UiManufacturer.kt">
-        <error line="5" column="21" source="standard:trailing-comma-on-declaration-site" />
-    </file>
-    <file name="src/test/java/com/dpanger/vehicles/features/manufacturers/LoadManufacturersUseCaseUnitTest.kt">
-        <error line="1" column="1" source="standard:final-newline" />
-        <error line="4" column="1" source="standard:no-unused-imports" />
-        <error line="5" column="1" source="standard:no-unused-imports" />
-        <error line="6" column="1" source="standard:no-unused-imports" />
-    </file>
-    <file name="src/test/java/com/dpanger/vehicles/features/manufacturers/ManufacturersViewModelUnitTest.kt">
-        <error line="1" column="1" source="standard:final-newline" />
-        <error line="3" column="1" source="standard:no-unused-imports" />
-        <error line="4" column="1" source="standard:no-unused-imports" />
-        <error line="5" column="1" source="standard:no-unused-imports" />
-        <error line="6" column="1" source="standard:no-unused-imports" />
+    <file name="src/main/java/com/dpanger/vehicles/features/manufacturers/ui/ManufacturersScreen.kt">
+        <error line="14" column="5" source="standard:function-naming" />
     </file>
 </baseline>
