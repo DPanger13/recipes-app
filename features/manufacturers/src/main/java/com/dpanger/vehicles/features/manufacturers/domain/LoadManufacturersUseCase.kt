@@ -1,6 +1,8 @@
-package com.dpanger.vehicles.features.manufacturers
+package com.dpanger.vehicles.features.manufacturers.domain
 
 import com.dpanger.vehicles.data.manufacturers.ManufacturerRepository
+import com.dpanger.vehicles.features.manufacturers.viewmodel.ManufacturersUiState
+import com.dpanger.vehicles.features.manufacturers.viewmodel.UiManufacturer
 import kotlinx.collections.immutable.toImmutableList
 import javax.inject.Inject
 

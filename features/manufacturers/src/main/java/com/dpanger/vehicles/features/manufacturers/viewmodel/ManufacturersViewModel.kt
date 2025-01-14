@@ -1,7 +1,8 @@
-package com.dpanger.vehicles.features.manufacturers
+package com.dpanger.vehicles.features.manufacturers.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.dpanger.vehicles.features.manufacturers.domain.LoadManufacturersUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

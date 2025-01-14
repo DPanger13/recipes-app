@@ -12,8 +12,8 @@ import com.dpanger.vehicles.features.makes.ui.ARG_MANUFACTURER_ID
 import com.dpanger.vehicles.features.makes.ui.MakesScreen
 import com.dpanger.vehicles.features.makes.ui.ROUTE_MAKES
 import com.dpanger.vehicles.features.makes.ui.forManufacturer
-import com.dpanger.vehicles.features.manufacturers.ManufacturersScreen
-import com.dpanger.vehicles.features.manufacturers.ROUTE_MANUFACTURERS
+import com.dpanger.vehicles.features.manufacturers.ui.ManufacturersScreen
+import com.dpanger.vehicles.features.manufacturers.ui.ROUTE_MANUFACTURERS
 
 @Composable
 fun VehiclesApp(

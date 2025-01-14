@@ -1,9 +1,6 @@
-package com.dpanger.vehicles.features.manufacturers
+package com.dpanger.vehicles.features.manufacturers.viewmodel
 
-import com.dpanger.vehicles.features.manufacturers.LoadManufacturersUseCase
-import com.dpanger.vehicles.features.manufacturers.ManufacturersUiState
-import com.dpanger.vehicles.features.manufacturers.ManufacturersViewModel
-import com.dpanger.vehicles.features.manufacturers.UiManufacturer
+import com.dpanger.vehicles.features.manufacturers.domain.LoadManufacturersUseCase
 import io.kotest.matchers.shouldBe
 import io.mockk.coEvery
 import io.mockk.mockk

@@ -1,4 +1,4 @@
-package com.dpanger.vehicles.features.manufacturers
+package com.dpanger.vehicles.features.manufacturers.viewmodel
 
 import kotlinx.collections.immutable.ImmutableList
 
