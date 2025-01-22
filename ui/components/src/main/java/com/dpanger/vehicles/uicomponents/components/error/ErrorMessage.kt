@@ -10,29 +10,25 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
 import com.dpanger.vehicles.ui.components.R
-
-private val subtitleSpacing = 4.dp
+import com.dpanger.vehicles.ui.themes.spacing
 
 @Composable
-fun ErrorMessage(
-    modifier: Modifier = Modifier
-) {
+fun ErrorMessage(modifier: Modifier = Modifier) {
     Column(
         modifier = modifier,
-        horizontalAlignment = Alignment.CenterHorizontally
+        horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         Text(
             text = stringResource(R.string.title_generic),
-            style = MaterialTheme.typography.headlineMedium
+            style = MaterialTheme.typography.headlineMedium,
         )
         Spacer(
-            modifier = Modifier.height(subtitleSpacing)
+            modifier = Modifier.height(MaterialTheme.spacing.padding.small),
         )
         Text(
             text = stringResource(R.string.message_generic),
-            style = MaterialTheme.typography.bodyMedium
+            style = MaterialTheme.typography.bodyMedium,
         )
     }
 }

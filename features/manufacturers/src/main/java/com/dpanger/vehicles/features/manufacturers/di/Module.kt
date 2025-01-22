@@ -6,10 +6,11 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import kotlinx.coroutines.Dispatchers
 
 @Module
 @InstallIn(SingletonComponent::class)
 internal class Module {
     @Provides
-    fun provideManufacturerRepository(): ManufacturerRepository = ManufacturerRepositoryImpl()
+    fun provideManufacturerRepository(): ManufacturerRepository = ManufacturerRepositoryImpl(Dispatchers.Default)
 }

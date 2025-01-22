@@ -7,6 +7,8 @@ android {
 }
 
 dependencies {
+    implementation(project(":ui:themes"))
+
     implementation(libs.core.ktx)
 
     implementation(platform(libs.compose.bom))
