@@ -6,11 +6,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 
 @Composable
-fun ProgressIndicator(
-    modifier: Modifier = Modifier
-) {
+fun ProgressIndicator(modifier: Modifier = Modifier) {
     CircularProgressIndicator(
-        modifier = modifier
+        modifier = modifier,
     )
 }
 
