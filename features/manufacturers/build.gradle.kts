@@ -17,7 +17,7 @@ android {
 dependencies {
     implementation(project(":ui:components"))
     implementation(project(":ui:themes"))
-    implementation(project(":vehicles"))
+    implementation(project(":data:vehicles"))
 
     implementation(libs.core.ktx)
 
