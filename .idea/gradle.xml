@@ -25,6 +25,7 @@
             <option value="$PROJECT_DIR$/apps/mobile" />
             <option value="$PROJECT_DIR$/build-logic" />
             <option value="$PROJECT_DIR$/data" />
+            <option value="$PROJECT_DIR$/data/feature_flags" />
             <option value="$PROJECT_DIR$/data/vehicles" />
             <option value="$PROJECT_DIR$/features" />
             <option value="$PROJECT_DIR$/features/makes" />
