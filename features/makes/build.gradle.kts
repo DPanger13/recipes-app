@@ -18,11 +18,6 @@ dependencies {
     implementation(project(":data:vehicles"))
 
     implementation(libs.core.ktx)
-
-    implementation(platform(libs.compose.bom))
-    implementation(libs.bundles.compose)
-    debugImplementation(libs.bundles.compose.debug)
-
     implementation(libs.lifecycle.viewmodel)
 
     testImplementation(libs.bundles.testing)
