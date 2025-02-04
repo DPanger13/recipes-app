@@ -1,6 +1,5 @@
 plugins {
     id("library-android")
-    kotlin("kapt")
 }
 
 android {
@@ -8,8 +7,5 @@ android {
 }
 
 dependencies {
-    implementation(libs.hilt)
-    kapt(libs.hilt.compiler)
-
     testImplementation(libs.bundles.testing)
 }

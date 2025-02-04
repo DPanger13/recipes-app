@@ -1,7 +1,5 @@
 plugins {
     id("library-android-compose")
-    kotlin("kapt")
-    alias(libs.plugins.hilt)
 }
 
 android {
@@ -27,13 +25,5 @@ dependencies {
 
     implementation(libs.lifecycle.viewmodel)
 
-    implementation(libs.hilt)
-    kapt(libs.hilt.compiler)
-    implementation(libs.hilt.navigation.compose)
-
     testImplementation(libs.bundles.testing)
-}
-
-kapt {
-    correctErrorTypes = true
 }
