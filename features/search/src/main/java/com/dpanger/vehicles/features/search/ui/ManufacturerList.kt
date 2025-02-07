@@ -31,11 +31,11 @@ private fun ManufacturerListPreview() =
         Surface {
             ManufacturerList(
                 manufacturers =
-                listOf(
-                    UiManufacturer(id = "1", name = "Toyota"),
-                    UiManufacturer(id = "2", name = "Honda"),
-                    UiManufacturer(id = "3", name = "Ford"),
-                ).toImmutableList(),
+                    listOf(
+                        UiManufacturer(id = "1", name = "Toyota"),
+                        UiManufacturer(id = "2", name = "Honda"),
+                        UiManufacturer(id = "3", name = "Ford"),
+                    ).toImmutableList(),
             )
         }
     }

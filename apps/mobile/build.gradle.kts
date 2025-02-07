@@ -19,11 +19,19 @@ android {
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
+
+    testOptions {
+        unitTests.all {
+            it.useJUnitPlatform()
+        }
+    }
 }
 
 dependencies {
+    implementation(project(":data:feature_flags"))
     implementation(project(":features:makes"))
     implementation(project(":features:manufacturers"))
+    implementation(project(":features:search"))
     implementation(project(":ui:themes"))
 
     implementation(libs.core.ktx)
@@ -37,4 +45,6 @@ dependencies {
     implementation(libs.hilt)
     kapt(libs.hilt.compiler)
     implementation(libs.hilt.navigation.compose)
+
+    testImplementation(libs.bundles.testing)
 }

@@ -64,7 +64,7 @@ internal fun SearchContent(
 @Preview
 @Composable
 private fun SearchContentLoadingPreview() =
-    VehiclesTheme { 
+    VehiclesTheme {
         Surface {
             SearchContent(
                 modifier = Modifier.fillMaxSize(),
@@ -129,14 +129,14 @@ private fun SearchContentWithResultsPreview() =
             SearchContent(
                 modifier = Modifier.fillMaxSize(),
                 uiState =
-                SearchUiState.Submitted.SomeResults(
-                    manufacturers =
-                    listOf(
-                        UiManufacturer(id = "1", name = "Toyota"),
-                        UiManufacturer(id = "2", name = "Honda"),
-                        UiManufacturer(id = "3", name = "Ford"),
-                    ).toImmutableList(),
-                ),
+                    SearchUiState.Submitted.SomeResults(
+                        manufacturers =
+                            listOf(
+                                UiManufacturer(id = "1", name = "Toyota"),
+                                UiManufacturer(id = "2", name = "Honda"),
+                                UiManufacturer(id = "3", name = "Ford"),
+                            ).toImmutableList(),
+                    ),
                 onManufacturerNameChange = { },
                 onSearchClicked = { },
                 onRetrySearchClicked = { },

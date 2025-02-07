@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.ui.Modifier
+import androidx.hilt.navigation.compose.hiltViewModel
 import com.dpanger.vehicles.ui.themes.VehiclesTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -17,6 +18,7 @@ class HomeActivity : ComponentActivity() {
             VehiclesTheme {
                 VehiclesApp(
                     modifier = Modifier.fillMaxSize(),
+                    viewModel = hiltViewModel(),
                 )
             }
         }
