@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="manufacturer_name">Manufacturer Name</string>
+    <string name="no_search_results">No Manufacturers Found</string>
+    <string name="retry_search">Re-enter Manufacturer Name</string>
+    <string name="search">Search</string>
+</resources>
