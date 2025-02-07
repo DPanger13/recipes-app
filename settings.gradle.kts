@@ -16,9 +16,10 @@ dependencyResolutionManagement {
 
 rootProject.name = "Vehicles-Android"
 include(":apps:mobile")
-include(":features:makes")
-include(":features:manufacturers")
-include(":ui:components")
-include(":ui:themes")
 include(":data:feature_flags")
 include(":data:vehicles")
+include(":features:makes")
+include(":features:manufacturers")
+include(":features:search")
+include(":ui:components")
+include(":ui:themes")

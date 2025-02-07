@@ -21,6 +21,7 @@ data class Margins(
 @Immutable
 data class Padding(
     val small: Dp,
+    val large: Dp,
 )
 
 @Immutable
@@ -32,6 +33,6 @@ val MaterialTheme.spacing: Spacing
     get() =
         Spacing(
             margins = Margins(horizontal = 16.dp, vertical = 16.dp),
-            padding = Padding(small = 4.dp),
+            padding = Padding(small = 4.dp, large = 16.dp),
             lists = Lists(singleLine = 6.dp),
         )
