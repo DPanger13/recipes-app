@@ -385,6 +385,8 @@ internal interface _UniFFILib : Library {
     ): RustBuffer.ByValue
     fun uniffi_vehicles_fn_func_manufacturers(_uniffi_out_err: RustCallStatus, 
     ): RustBuffer.ByValue
+    fun uniffi_vehicles_fn_func_search_manufacturers(`name`: RustBuffer.ByValue,_uniffi_out_err: RustCallStatus, 
+    ): RustBuffer.ByValue
     fun ffi_vehicles_rustbuffer_alloc(`size`: Int,_uniffi_out_err: RustCallStatus, 
     ): RustBuffer.ByValue
     fun ffi_vehicles_rustbuffer_from_bytes(`bytes`: ForeignBytes.ByValue,_uniffi_out_err: RustCallStatus, 
@@ -503,6 +505,8 @@ internal interface _UniFFILib : Library {
     ): Short
     fun uniffi_vehicles_checksum_func_manufacturers(
     ): Short
+    fun uniffi_vehicles_checksum_func_search_manufacturers(
+    ): Short
     fun ffi_vehicles_uniffi_contract_version(
     ): Int
     
@@ -524,6 +528,9 @@ private fun uniffiCheckApiChecksums(lib: _UniFFILib) {
         throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     }
     if (lib.uniffi_vehicles_checksum_func_manufacturers() != 26746.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_vehicles_checksum_func_search_manufacturers() != 33060.toShort()) {
         throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     }
 }
@@ -763,6 +770,15 @@ fun `manufacturers`(): List<Manufacturer> {
     return FfiConverterSequenceTypeManufacturer.lift(
     rustCallWithError(VehiclesException) { _status ->
     _UniFFILib.INSTANCE.uniffi_vehicles_fn_func_manufacturers(_status)
+})
+}
+
+@Throws(VehiclesException::class)
+
+fun `searchManufacturers`(`name`: String): List<Manufacturer> {
+    return FfiConverterSequenceTypeManufacturer.lift(
+    rustCallWithError(VehiclesException) { _status ->
+    _UniFFILib.INSTANCE.uniffi_vehicles_fn_func_search_manufacturers(FfiConverterString.lower(`name`),_status)
 })
 }
 
