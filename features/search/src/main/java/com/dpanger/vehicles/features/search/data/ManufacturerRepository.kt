@@ -1,6 +1,6 @@
 package com.dpanger.vehicles.features.search.data
 
-interface ManufacturerRepository {
+internal interface ManufacturerRepository {
     /**
      * @param name The full or partial name of the manufacturer.
      */

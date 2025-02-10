@@ -13,6 +13,7 @@ android {
 }
 
 dependencies {
+    implementation(project(":data:vehicles"))
     implementation(project(":ui:components"))
     implementation(project(":ui:themes"))
 
