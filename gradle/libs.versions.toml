@@ -8,6 +8,7 @@ jna = "5.14.0"
 junit5 = "5.8.2"
 kotest = "5.8.0"
 kotlin = "2.0.0"
+ksp = "2.0.0-1.0.24"
 ktlint = "12.1.0"
 lifecycle = "2.8.7"
 mockk = "1.13.8"
@@ -23,6 +24,7 @@ jna = { group = "net.java.dev.jna", name = "jna", version.ref = "jna" }
 junit5 = { group = "org.junit.jupiter", name = "junit-jupiter", version.ref = "junit5" }
 kotest = { group = "io.kotest", name = "kotest-runner-junit5", version.ref = "kotest" }
 kotlin-gradle = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+ksp-gradle = { group = "com.google.devtools.ksp", name = "com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
 ktlint-gradle = { group = "org.jlleitschuh.gradle", name = "ktlint-gradle", version.ref = "ktlint" }
 lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycle" }
 lifecycle-viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "lifecycle" }
@@ -34,6 +36,7 @@ android-library = { id = "com.android.library", version.ref = "agp" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 
 [bundles]
 testing = [ "junit5", "mockk", "kotest", "coroutines-test" ]
