@@ -8,8 +8,6 @@ import com.dpanger.vehicles.features.manufacturers.viewmodel.ManufacturersViewMo
 import com.dpanger.vehicles.uicomponents.components.error.ErrorMessage
 import com.dpanger.vehicles.uicomponents.components.progress.ProgressIndicator
 
-const val ROUTE_MANUFACTURERS = "manufacturers"
-
 @Composable
 fun ManufacturersScreen(
     viewModel: ManufacturersViewModel,

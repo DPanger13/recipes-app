@@ -1,5 +1,6 @@
 plugins {
     id("library-android-compose")
+    kotlin("plugin.serialization")
 }
 
 android {
@@ -19,6 +20,7 @@ dependencies {
 
     implementation(libs.core.ktx)
     implementation(libs.lifecycle.viewmodel)
+    implementation(libs.serialization)
 
     testImplementation(libs.bundles.testing)
 }
