@@ -9,4 +9,5 @@ dependencies {
     implementation(libs.kotlin.gradle)
     implementation(libs.ksp.gradle)
     implementation(libs.ktlint.gradle)
+    implementation(libs.serialization.gradle)
 }

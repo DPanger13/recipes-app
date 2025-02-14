@@ -5,6 +5,7 @@ plugins {
     id("com.google.dagger.hilt.android")
     kotlin("android")
     id("com.google.devtools.ksp")
+    kotlin("plugin.serialization")
 }
 
 android {
@@ -49,6 +50,10 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-tooling")
 
     implementation("androidx.lifecycle:lifecycle-runtime-compose:2.8.7")
+
+    // Compose Navigation + Typesafe routes w/ Serialization
+    implementation("androidx.navigation:navigation-compose:2.8.7")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.3")
 
     val hiltVersion = "2.49"
     implementation("com.google.dagger:hilt-android:$hiltVersion")
