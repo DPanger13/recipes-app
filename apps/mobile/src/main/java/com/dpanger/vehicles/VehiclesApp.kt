@@ -10,13 +10,12 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.dpanger.vehicles.features.makes.ui.ARG_MANUFACTURER_ID
+import androidx.navigation.toRoute
+import com.dpanger.vehicles.features.makes.ui.MakesRoute
 import com.dpanger.vehicles.features.makes.ui.MakesScreen
-import com.dpanger.vehicles.features.makes.ui.ROUTE_MAKES
-import com.dpanger.vehicles.features.makes.ui.forManufacturer
+import com.dpanger.vehicles.features.manufacturers.ui.ManufacturersRoute
 import com.dpanger.vehicles.features.manufacturers.ui.ManufacturersScreen
-import com.dpanger.vehicles.features.manufacturers.ui.ROUTE_MANUFACTURERS
-import com.dpanger.vehicles.features.search.ui.ROUTE_SEARCH
+import com.dpanger.vehicles.features.search.ui.SearchRoute
 import com.dpanger.vehicles.features.search.ui.SearchScreen
 import com.dpanger.vehicles.viewmodel.AppUiState
 import com.dpanger.vehicles.viewmodel.AppViewModel
@@ -36,7 +35,7 @@ fun VehiclesApp(
         is AppUiState.Success -> {
             val startDestination =
                 remember(uiState.isSearchEnabled) {
-                    if (uiState.isSearchEnabled) ROUTE_SEARCH else ROUTE_MANUFACTURERS
+                    if (uiState.isSearchEnabled) SearchRoute else ManufacturersRoute
                 }
 
             Surface(
@@ -48,26 +47,27 @@ fun VehiclesApp(
                     startDestination = startDestination,
                 ) {
                     if (uiState.isSearchEnabled) {
-                        composable(ROUTE_SEARCH) {
+                        composable<SearchRoute> {
                             SearchScreen(
                                 viewModel = hiltViewModel(),
                             )
                         }
                     } else {
-                        composable(ROUTE_MANUFACTURERS) {
+                        composable<ManufacturersRoute> {
                             ManufacturersScreen(
                                 viewModel = hiltViewModel(),
                                 onManufacturerClicked = { id ->
-                                    val route = forManufacturer(id)
+                                    val route = MakesRoute(id)
                                     navController.navigate(route)
                                 },
                             )
                         }
                     }
-                    composable(ROUTE_MAKES) { entry ->
+                    composable<MakesRoute> { entry ->
+                        val route = entry.toRoute<MakesRoute>()
                         MakesScreen(
                             viewModel = hiltViewModel(),
-                            manufacturerId = entry.arguments?.getString(ARG_MANUFACTURER_ID).orEmpty(),
+                            manufacturerId = route.manufacturerId,
                         )
                     }
                 }
