@@ -30,6 +30,7 @@ dependencies {
     implementation(project(":features:makes"))
     implementation(project(":features:manufacturers"))
     implementation(project(":features:search"))
+    implementation(project(":features:search_results"))
     implementation(project(":ui:themes"))
 
     implementation(libs.core.ktx)

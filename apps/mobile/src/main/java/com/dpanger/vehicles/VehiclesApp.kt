@@ -1,5 +1,6 @@
 package com.dpanger.vehicles
 
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
@@ -17,6 +18,9 @@ import com.dpanger.vehicles.features.manufacturers.ui.ManufacturersRoute
 import com.dpanger.vehicles.features.manufacturers.ui.ManufacturersScreen
 import com.dpanger.vehicles.features.search.ui.SearchRoute
 import com.dpanger.vehicles.features.search.ui.SearchScreen
+import com.dpanger.vehicles.features.searchresults.ui.SearchResultsRoute
+import com.dpanger.vehicles.features.searchresults.ui.SearchResultsScreen
+import com.dpanger.vehicles.features.searchresults.viewmodel.SearchResultsViewModel
 import com.dpanger.vehicles.viewmodel.AppUiState
 import com.dpanger.vehicles.viewmodel.AppViewModel
 
@@ -49,7 +53,25 @@ fun VehiclesApp(
                     if (uiState.isSearchEnabled) {
                         composable<SearchRoute> {
                             SearchScreen(
-                                viewModel = hiltViewModel(),
+                                modifier = Modifier.fillMaxSize(),
+                                onSearchClicked = { manufacturerName ->
+                                    val route = SearchResultsRoute(manufacturerName)
+                                    navController.navigate(route)
+                                },
+                            )
+                        }
+                        composable<SearchResultsRoute> { entry ->
+                            val route = entry.toRoute<SearchResultsRoute>()
+                            SearchResultsScreen(
+                                viewModel =
+                                    hiltViewModel(
+                                        creationCallback = { factory: SearchResultsViewModel.Factory ->
+                                            factory.create(route.manufacturerName)
+                                        },
+                                    ),
+                                onRetrySearchClicked = {
+                                    navController.popBackStack()
+                                },
                             )
                         }
                     } else {
