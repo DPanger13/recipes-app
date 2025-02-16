@@ -31,6 +31,7 @@
             <option value="$PROJECT_DIR$/features/makes" />
             <option value="$PROJECT_DIR$/features/manufacturers" />
             <option value="$PROJECT_DIR$/features/search" />
+            <option value="$PROJECT_DIR$/features/search_results" />
             <option value="$PROJECT_DIR$/ui" />
             <option value="$PROJECT_DIR$/ui/components" />
             <option value="$PROJECT_DIR$/ui/themes" />
